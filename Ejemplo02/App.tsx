@@ -17,18 +17,21 @@ import {
 } from 'react-native';
 
 import FlatCard from './components/FlatCard';
+import FlatCardScroll from './components/FlatCardScroll';
+import FancyCard from './components/FancyCard';
+import ContactList from './components/ContactList';
+import ActionCard from './components/ActionCard';
 
 
 function App(): JSX.Element {
-
-
-
   return (
     <SafeAreaView>
       <ScrollView>
         <FlatCard/>
-        <FlatCard/>
-        <FlatCard/><FlatCard/><FlatCard/><FlatCard/><FlatCard/>
+        <FlatCardScroll/>
+        <FancyCard/>
+        <ContactList/>
+        <ActionCard/>
       </ScrollView>
     </SafeAreaView>
   );
