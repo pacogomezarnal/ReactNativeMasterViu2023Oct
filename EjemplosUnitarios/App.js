@@ -6,6 +6,8 @@ import FlexEjemplo from './components/FlexEjemplo'
 import ComImagen from './components/ComImagen'
 import CompScrollView from './components/CompScrollView'
 import CompTouch from './components/CompTouch'
+import CompTextInput from './components/CompTextInput'
+import CompPress from './components/CompPress';
 
 //ENUM de los ejemplos unitarios
 const EJEMPLOS={
@@ -14,8 +16,10 @@ const EJEMPLOS={
   IMAGEN:2,
   SCROLLVIEW:3,
   COMPTOUCH:4,
+  INPUTTEXT:5,
+  COMPPRESS:6
 }
-const ejemplo=EJEMPLOS.COMPTOUCH
+const ejemplo=EJEMPLOS.COMPPRESS
 
 export default function App() {
   //Carga a partir de la seleccion
@@ -25,6 +29,8 @@ export default function App() {
   else if(ejemplo==EJEMPLOS.IMAGEN) appCargar=<ComImagen/>
   else if (ejemplo==EJEMPLOS.SCROLLVIEW) appCargar=<CompScrollView/>
   else if (ejemplo==EJEMPLOS.COMPTOUCH) appCargar=<CompTouch/>
+  else if (ejemplo==EJEMPLOS.INPUTTEXT) appCargar=<CompTextInput/>
+  else if (ejemplo==EJEMPLOS.COMPPRESS) appCargar=<CompPress/>
   //JSX.Element
   return (
     <View style={styles.container}>
